@@ -120,7 +120,7 @@ func main() {
 
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", checkServer)
-	router.HandleFunc("/createblockChain", createBlockChain).Methods("POST")
+	router.HandleFunc("/createblockchain", createBlockChain).Methods("POST")
 	router.HandleFunc("/sendtransaction", sendTransaction).Methods("POST")
 	router.HandleFunc("/printchain", printChain).Methods("GET")
 	router.HandleFunc("/getbalance/{from}", getBalance).Methods("GET")
